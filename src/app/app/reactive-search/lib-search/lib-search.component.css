@@ -1,0 +1,17 @@
+.btn-sucess{
+  background: green;
+  width: 150px;
+  height: 35px;
+
+}
+
+.input-pes{
+  width: 200px;
+  height: 35px;
+
+}
+
+div {
+  display: inline-block;
+  text-align: center;
+}

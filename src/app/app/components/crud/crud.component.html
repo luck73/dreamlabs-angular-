@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <div class="config">
+    <div class="input-pes">
+      <input class="input-pes"
+        type="text"
+        id="myInput"
+        class="input-pes"
+        placeholder="Pesquisar por Títulos"
+      />
+    </div>
+
+    <div class="btn-sucess">
+      <button class="btn-sucess" (click)="onSearch()">Pesquisar</button>
+    </div>
+  </div>
+  <p>
+  ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  </p>
+  <div class="row">
+    <div *ngFor="let i of showpost | paginate: {
+      itemsPerPage: 5,
+      currentPage: page,
+      totalItems:totalLength
+    }">
+    <h1>{{ i.title }}</h1>
+
+    <h1>{{ i.body }}</h1>
+    <p>
+      ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    </p>
+    </div>
+
+    <pagination-controls (pageChange)="page = $event"></pagination-controls>
+
+  </div>
+</body>
+</html>
